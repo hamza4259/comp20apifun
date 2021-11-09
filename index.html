@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="API Fun, COMP20 assignment" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Fun</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="index.js"></script>
+  </head>
+  <body>
+    <h1>Find a github repository from any date by using any word</h1>
+    <p>
+      Using GitHub's repository search API, the user is able to access a lot of data
+      useful for github repositories such as date, languages, or number of stars
+    </p>
+    <p>
+      I found this API in a GitHub repo which included many public access free 
+      APIs. The link is https://github.com/public-apis/public-apis
+    </p>
+    <p>
+      This API can help people keep track of their own code as well as competitor's code.
+      For example if company a and company b are competing maybe company a wants to know 
+      how quickly other people are working on the same idea they can use this api to filter 
+      github search results.
+    </p>
+    <p>
+      This API can also help people who want inspiration on what to develop next, 
+      for example maybe they can research software trends and see where the most 5 
+      star repositories are coming from and then maybe delve into that area next.
+    </p>
+    <p>
+      I made use of this api by allowing the user to specify a date and a word
+      to find certain repositories that relate to the specified keyword on the given date.
+    </p>
+    <ol>
+      <li>Think of any random word and enter it in the first input box</li>
+      <li>Fill in a date in the form YYYY-MM-DD; for example 2020-04-20 and fill it in the second box</li>
+    </ol>
+    <form id="search-form">
+      <label for="input-word"><strong>Custom Query:</strong></label>
+      <input type="text" id="input-word" name="input-word" placeholder="enter random word"/>
+       <input type="text" id="input-date" name="input-date" placeholder="date in form: YYYY-MM-DD form" />
+      <button type="button" id="search-button" onclick="search()">Search</button>
+    </form>
+    <div id="all-repo-cards"></div>
+  </body>
+</html>
